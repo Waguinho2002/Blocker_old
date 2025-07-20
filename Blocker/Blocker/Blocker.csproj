@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D49CB903-7C2B-487D-AAE6-A81ED2B280B8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Blocker</RootNamespace>
+    <AssemblyName>Blocker</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icoaa %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="malwareload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="malwareload.Designer.cs">
+      <DependentUpon>malwareload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MalwareWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MalwareWindow.Designer.cs">
+      <DependentUpon>MalwareWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mbr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mbr.Designer.cs">
+      <DependentUpon>mbr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mbr2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mbr2.Designer.cs">
+      <DependentUpon>mbr2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Readme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Readme.Designer.cs">
+      <DependentUpon>Readme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rsod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rsod.Designer.cs">
+      <DependentUpon>Rsod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rules.Designer.cs">
+      <DependentUpon>Rules.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="malwareload.resx">
+      <DependentUpon>malwareload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MalwareWindow.resx">
+      <DependentUpon>MalwareWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mbr.resx">
+      <DependentUpon>mbr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mbr2.resx">
+      <DependentUpon>mbr2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rsod.resx">
+      <DependentUpon>Rsod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rules.resx">
+      <DependentUpon>Rules.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\RECUP.reg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Readme.resx">
+      <DependentUpon>Readme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icoaa %281%29.ico" />
+    <Content Include="icoaa.ico" />
+    <Content Include="Minecraft_Launcher.ico" />
+    <EmbeddedResource Include="Resources\fakeuser.exe" />
+    <EmbeddedResource Include="Resources\unins000.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
